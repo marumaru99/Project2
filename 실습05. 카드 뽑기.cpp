@@ -1,23 +1,23 @@
 #include <iostream>
-#include <cstdlib>//·£´ı ÁøÇà
+#include <cstdlib>//ëœë¤ ì§„í–‰
 #include <ctime>
 #include <string>
 using namespace std;
 
-//Å¬·¡½º Card¸¦ ¸¸µé¾î main¿¡¼­ »Ì±â ÁøÇà
+//í´ë˜ìŠ¤ Cardë¥¼ ë§Œë“¤ì–´ mainì—ì„œ ë½‘ê¸° ì§„í–‰
 class Card
 {
 
 public:
-	Card();//¹è¿­¿¡ ´ëÇÑ ÀÎµ¦½º ³Ö¾î¼­ »ı¼º(·£´ı)
-	void CardInfo();//Ä«µå Á¤º¸ È®ÀÎ
+	Card();//ë°°ì—´ì— ëŒ€í•œ ì¸ë±ìŠ¤ ë„£ì–´ì„œ ìƒì„±(ëœë¤)
+	void CardInfo();//ì¹´ë“œ ì •ë³´ í™•ì¸
 	int Cardsum();
 	string Shape;
 	int number;
 	string color;
 };
 
-string Shapelist[4] = { "¡ß","¢¼","¢¾","¢À" };//·£´ıÀ¸·Î ¼±ÅÃµÉ ¸ñ·Ï
+string Shapelist[4] = { "â—†","â™ ","â™¥","â™£" };//ëœë¤ìœ¼ë¡œ ì„ íƒë  ëª©ë¡
 int numberlist[13] = { 1,2,3,4,5,6,7,8,9,10,11,12,13};
 
 int main()
@@ -27,36 +27,36 @@ int main()
 	c.CardInfo();
 	Card c1;
 	c1.CardInfo();*/
-	//Ä«µå¸¦ »Ì¾Æ¼­ »ÌÀº Ä«µå ¼ıÀÚ º¸°ü.
-	//Ä«µå 2°³¸¦ »Ì¾Æ¼­ ¼ıÀÚÀÇ ÇÕÀÌ ´õ Å« ÇÃ·¹ÀÌ¾î°¡ ½Â¸®ÇÏ´Â °ÔÀÓ ±¸¼º.
-	//ÇöÀç ÁÖ¾îÁø Å¬·¡½º¸¦ È°¿ë, ¼öÁ¤ÇØ¼­ ÀÛ¾÷ ÁøÇà
+	//ì¹´ë“œë¥¼ ë½‘ì•„ì„œ ë½‘ì€ ì¹´ë“œ ìˆ«ì ë³´ê´€.
+	//ì¹´ë“œ 2ê°œë¥¼ ë½‘ì•„ì„œ ìˆ«ìì˜ í•©ì´ ë” í° í”Œë ˆì´ì–´ê°€ ìŠ¹ë¦¬í•˜ëŠ” ê²Œì„ êµ¬ì„±.
+	//í˜„ì¬ ì£¼ì–´ì§„ í´ë˜ìŠ¤ë¥¼ í™œìš©, ìˆ˜ì •í•´ì„œ ì‘ì—… ì§„í–‰
 	Card a01;
 	Card a02;
-	cout << "Ã¹ ¹øÂ° ÇÃ·¹ÀÌ¾î´Â Ä«µå µÎÀåÀ» »Ì¾ÆÁÖ¼¼¿ä." << endl;
+	cout << "ì²« ë²ˆì§¸ í”Œë ˆì´ì–´ëŠ” ì¹´ë“œ ë‘ì¥ì„ ë½‘ì•„ì£¼ì„¸ìš”." << endl;
 	a01.CardInfo();
 	a02.CardInfo();
 	int playera = a01.number + a02.number;
 
-	cout << "µÎ ¼ıÀÚÀÇ ÇÕÀº " << playera << "ÀÔ´Ï´Ù.\n" << endl;
+	cout << "ë‘ ìˆ«ìì˜ í•©ì€ " << playera << "ì…ë‹ˆë‹¤.\n" << endl;
 	
 	Card b01;
 	Card b02;
-	cout << "µÎ ¹øÂ° ÇÃ·¹ÀÌ¾î´Â Ä«µå µÎÀåÀ» »Ì¾ÆÁÖ¼¼¿ä." << endl;
+	cout << "ë‘ ë²ˆì§¸ í”Œë ˆì´ì–´ëŠ” ì¹´ë“œ ë‘ì¥ì„ ë½‘ì•„ì£¼ì„¸ìš”." << endl;
 	b01.CardInfo();
 	b02.CardInfo();
 	int playerb = b01.number + b02.number;
-	cout << "µÎ ¼ıÀÚÀÇ ÇÕÀº " << playerb << "ÀÔ´Ï´Ù.\n" << endl;
+	cout << "ë‘ ìˆ«ìì˜ í•©ì€ " << playerb << "ì…ë‹ˆë‹¤.\n" << endl;
 	if (playera > playerb)
 	{
-		cout << "Ã¹ ¹øÂ° ÇÃ·¹ÀÌ¾î°¡ ½Â¸®Çß½À´Ï´Ù." << endl;
+		cout << "ì²« ë²ˆì§¸ í”Œë ˆì´ì–´ê°€ ìŠ¹ë¦¬í–ˆìŠµë‹ˆë‹¤." << endl;
 	}
 	else if (playera < playerb)
 	{
-		cout << "µÎ ¹øÂ° ÇÃ·¹ÀÌ¾î°¡ ½Â¸®Çß½À´Ï´Ù." << endl;
+		cout << "ë‘ ë²ˆì§¸ í”Œë ˆì´ì–´ê°€ ìŠ¹ë¦¬í–ˆìŠµë‹ˆë‹¤." << endl;
 	}
 	else
 	{
-		cout << "µ¿Á¡ÀÔ´Ï´Ù." << endl;
+		cout << "ë™ì ì…ë‹ˆë‹¤." << endl;
 	}
 
 
@@ -66,13 +66,40 @@ int main()
 
 Card::Card()
 {
-	Shape = Shapelist[rand() % 4];//rand¹üÀ§ 0~3
-	number = numberlist[rand() % 13];//rand¹üÀ§ 0~12
+	Shape = Shapelist[rand() % 4];//randë²”ìœ„ 0~3
+	number = numberlist[rand() % 13];//randë²”ìœ„ 0~12
 }
 
 void Card::CardInfo()
 {
-	cout << Shape << number << endl;
+	if (number ==1)
+	{
+		to_string(number);
+		string number = "A";
+		cout << Shape << number << endl;
+	}
+	else if (number == 11)
+	{
+		to_string(number);
+		string number = "J";
+		cout << Shape << number << endl;
+	}
+	else if (number == 12)
+	{
+		to_string(number);
+		string number = "Q";
+		cout << Shape << number << endl;
+	}
+	else if (number == 13)
+	{
+		to_string(number);
+		string number = "K";
+		cout << Shape << number << endl;
+	}
+	else 
+	{
+		cout << Shape << number << endl;
+	}
 }
 
 
